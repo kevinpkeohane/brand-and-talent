@@ -25,6 +25,26 @@
     });
   }
 
+  // Selectable outcome cards: hover/focus previews pink via CSS; click/Enter/Space
+  // makes the chosen outcome persistently pink, with AI selected by default.
+  var outcomeCards = Array.prototype.slice.call(document.querySelectorAll("#services .card"));
+  var selectOutcome = function (selected) {
+    outcomeCards.forEach(function (card) {
+      var active = card === selected;
+      card.classList.toggle("is-selected", active);
+      card.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  };
+  outcomeCards.forEach(function (card) {
+    card.addEventListener("click", function () { selectOutcome(card); });
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        selectOutcome(card);
+      }
+    });
+  });
+
   // Reveal-on-scroll (respects reduced motion)
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var targets = document.querySelectorAll(".section, .hero .lede, .hero-actions, .card, .work, .quote, .stat, .timeline li");
