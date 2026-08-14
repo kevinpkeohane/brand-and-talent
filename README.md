@@ -22,11 +22,21 @@ accountable strategic lead and enabled by agentic AI.
 ## Files
 | File | Purpose |
 |------|---------|
-| `index.html` | Semantic markup + JSON-LD (`Organization`/`ProfessionalService`, `Product`, `Person`) + OG/Twitter meta |
-| `styles.css` | Black/white + acid-pink system, responsive, accessible focus states |
+| `index.html` | Semantic markup + JSON-LD (`Organization`/`ProfessionalService`, `Product`, `Person`, `WebSite`, **`FAQPage`**) + expanded OG/Twitter/keywords/geo meta |
+| `styles.css` | Black/white + acid-pink system, responsive, accessible focus states (+ FAQ accordion styles) |
 | `script.js` | Progressive enhancement only: mobile nav, footer year, reveal-on-scroll |
+| `robots.txt` | **NEW** — crawl directives + `Sitemap:` reference for search engines |
+| `sitemap.xml` | **NEW** — XML sitemap (home + in-page section anchors + images) |
 | `assets/` | Provided logos (`logo-white/black/color/color-bg.svg`) + generated `favicon.svg` |
 | `source-docs/` | Kevin's supplied marketing portfolio PDF (linked as downloadable evidence) |
+
+## SEO additions (this revision)
+- **`robots.txt`** (root) — allows all crawlers, ready to disallow private/staging paths later, and links the XML sitemap.
+- **`sitemap.xml`** (root) — home URL + primary section anchors, with `lastmod`/`changefreq`/`priority` and image entries. Update `<lastmod>` when content changes.
+- **Meta tags** — added `keywords`, `robots`/`googlebot` directives, `geo.*`/`ICBM` local-SEO tags, `revisit-after`, and expanded Open Graph / Twitter (`og:image:alt`, `og:locale`, `twitter:image`).
+- **Content / keywords** — new **FAQ** section (`#faq`, in nav) targeting high-intent queries (brand consultancy, go-to-market strategy, GTM playbook, EX→CX, agentic AI, assembled senior teams), backed by **FAQPage** structured data eligible for rich results. Also added a `WebSite` JSON-LD node.
+
+> After deploy, submit `https://brandandtalent.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, and validate the FAQ markup with Google's Rich Results Test.
 
 ## Sections
 Hero → Trusted-by → **What we do** (4 offerings) → **How we work** (assembled senior teams) →
@@ -52,9 +62,11 @@ All copy is grounded in supplied/first-party material only:
 
 ## Local preview
 ```bash
-cd brandandtalent-site
+cd brandandtalent-site-seo
 python3 -m http.server 8080   # then open http://localhost:8080
 ```
+
+> Note: `robots.txt` and `sitemap.xml` use absolute `https://brandandtalent.com/` URLs, so they work correctly once deployed at the domain root (not needed for local preview).
 
 ## Deploy
 Static hosting (Netlify, Cloudflare Pages, S3, GitHub Pages). Point `brandandtalent.com` at the

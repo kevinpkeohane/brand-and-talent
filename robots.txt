@@ -1,0 +1,13 @@
+# robots.txt for brandandtalent.com
+# Allow all reputable search engines to crawl the entire site.
+
+User-agent: *
+Allow: /
+
+# Block nothing by default. If you add private/staging paths later,
+# disallow them here, e.g.:
+# Disallow: /private/
+# Disallow: /staging/
+
+# Point crawlers to the XML sitemap
+Sitemap: https://brandandtalent.com/sitemap.xml
