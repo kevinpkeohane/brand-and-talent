@@ -441,3 +441,22 @@ strong { font-weight: 700; }
   line-height: 1.65;
 }
 .faq p a { color: var(--accent); }
+
+/* Blog section: force all copy white */
+.blog-section,
+.blog-section .kicker,
+.blog-section h2,
+.blog-section .section-sub,
+.blog-section p,
+.blog-section a,
+.blog-section span,
+.blog-section li,
+.blog-section h1,
+.blog-section h3,
+.blog-section h4,
+.blog-section h5,
+.blog-section h6,
+.blog-section #soro-blog,
+.blog-section #soro-blog * {
+  color: #fff !important;
+}
