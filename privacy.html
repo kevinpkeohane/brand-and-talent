@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Brand &amp; Talent</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #0a0a0a;
+      --white: #ffffff;
+      --gray: #a0a0a0;
+      --mid: #1a1a1a;
+      --border: #2a2a2a;
+      --accent: #c8a96e;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--ink);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    .nav {
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-back {
+      font-size: 13px;
+      color: var(--gray);
+    }
+    .nav-back:hover { color: var(--white); }
+
+    /* Main */
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+
+    /* Header */
+    .page-header { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .page-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-meta {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* Content */
+    .section { margin-bottom: 48px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--white);
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    p { font-size: 15px; color: #d0d0d0; margin-bottom: 14px; }
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { font-size: 15px; color: #d0d0d0; margin-bottom: 6px; }
+    strong { color: var(--white); font-weight: 500; }
+
+    /* Rights table */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 16px 0;
+    }
+    .rights-grid .cell {
+      padding: 12px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .rights-grid .cell:nth-last-child(-n+2) { border-bottom: none; }
+    .rights-grid .cell.label {
+      background: #111;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .rights-grid .cell.value { color: #d0d0d0; }
+
+    /* Third parties */
+    .processor {
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+    .processor-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .processor-desc { font-size: 13px; color: var(--gray); }
+
+    /* Contact box */
+    .contact-box {
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 16px;
+    }
+    .contact-box p { margin-bottom: 6px; }
+
+    /* Cookie tag */
+    .cookie-tag {
+      display: inline-block;
+      background: #1e1e1e;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--accent);
+      margin: 2px 4px 2px 0;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    @media (max-width: 600px) {
+      .nav { padding: 16px 20px; }
+      .wrap { padding: 40px 20px 80px; }
+      .rights-grid { grid-template-columns: 1fr; }
+      .rights-grid .cell.label { border-bottom: none; padding-bottom: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Brand <span>&amp;</span> Talent</a>
+    <a href="/" class="nav-back">← Back to site</a>
+  </nav>
+
+  <div class="wrap">
+
+    <div class="page-header">
+      <div class="page-label">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="page-meta">
+        Effective date: 8 September 2026 &nbsp;·&nbsp; Last updated: 8 September 2026<br />
+        Applies to: brandandtalent.com and related Brand &amp; Talent digital properties
+      </p>
+    </div>
+
+    <!-- 1. Who we are -->
+    <div class="section">
+      <h2>1. Who We Are</h2>
+      <p>
+        This website is operated by <strong>Brand &amp; Talent</strong>, a brand, go-to-market, and growth
+        consultancy. The data controller for the purposes of the UK and EU General Data Protection
+        Regulation (GDPR) is:
+      </p>
+      <div class="contact-box">
+        <p><strong>Brand &amp; Talent</strong></p>
+        <p>Operated by: Kevin Keohane</p>
+        <p>Email: <a href="mailto:kevin.keohane@brandandtalent.com">kevin.keohane@brandandtalent.com</a></p>
+        <p>Phone: <a href="tel:+14065525998">+1 406 552 5998</a></p>
+        <p>Website: <a href="https://brandandtalent.com">brandandtalent.com</a></p>
+      </div>
+    </div>
+
+    <!-- 2. Data we collect -->
+    <div class="section">
+      <h2>2. What Data We Collect and Why</h2>
+
+      <h3>2.1 Data you provide directly</h3>
+      <p>When you contact us via our contact form or by email, we collect:</p>
+      <ul>
+        <li>Your name</li>
+        <li>Your email address</li>
+        <li>Any information you include in your message</li>
+      </ul>
+      <p>
+        <strong>Purpose:</strong> To respond to your enquiry and assess whether we can work together.<br />
+        <strong>Legal basis:</strong> Legitimate interests (Article 6(1)(f) GDPR) — it is in both parties' interests to communicate about a potential engagement.
+      </p>
+
+      <h3>2.2 Analytics data (Google Analytics 4)</h3>
+      <p>
+        We use Google Analytics 4 to understand how visitors use this website. This includes data such as
+        pages visited, time on site, device type, approximate geographic location, and how you arrived at
+        the site. This data is anonymised and aggregated — we cannot identify you individually from it.
+      </p>
+      <p>
+        <strong>Purpose:</strong> To improve our website and understand our audience.<br />
+        <strong>Legal basis:</strong> Legitimate interests (Article 6(1)(f) GDPR).
+      </p>
+
+      <h3>2.3 Advertising and retargeting data</h3>
+      <p>
+        We use the Meta Pixel and LinkedIn Insight Tag to measure the effectiveness of our advertising
+        campaigns and, where applicable, to show relevant ads to people who have visited our site.
+        These tools may set cookies and collect information about your browsing behaviour across sites.
+      </p>
+      <p>
+        <strong>Purpose:</strong> Measuring ad campaign performance; interest-based advertising.<br />
+        <strong>Legal basis:</strong> Consent (Article 6(1)(a) GDPR) where required by applicable law;
+        otherwise legitimate interests.
+      </p>
+    </div>
+
+    <!-- 3. Cookies -->
+    <div class="section">
+      <h2>3. Cookies</h2>
+      <p>This site uses the following categories of cookies:</p>
+      <ul>
+        <li>
+          <strong>Analytics cookies</strong> — set by Google Analytics 4 to measure site usage.
+          Includes <span class="cookie-tag">_ga</span> <span class="cookie-tag">_ga_*</span>
+          (persist up to 2 years).
+        </li>
+        <li>
+          <strong>Advertising cookies</strong> — set by Meta (Facebook) Pixel and LinkedIn Insight Tag
+          to measure ad performance and enable retargeting.
+          Includes <span class="cookie-tag">_fbp</span> <span class="cookie-tag">li_fat_id</span>
+          and related cookies (persist up to 90 days).
+        </li>
+      </ul>
+      <p>
+        You can control or delete cookies through your browser settings at any time.
+        Opting out of advertising cookies will not affect your ability to use this site.
+      </p>
+    </div>
+
+    <!-- 4. Third parties -->
+    <div class="section">
+      <h2>4. Third-Party Data Processors</h2>
+      <p>We share data with the following trusted third parties in order to operate this website:</p>
+
+      <div class="processor">
+        <div class="processor-name">Google LLC — Google Analytics 4</div>
+        <div class="processor-desc">
+          Provides website analytics. Data may be transferred to and stored on servers in the United States.
+          Google complies with the EU–US Data Privacy Framework.
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy ↗</a>
+        </div>
+      </div>
+
+      <div class="processor">
+        <div class="processor-name">Meta Platforms, Inc. — Meta Pixel</div>
+        <div class="processor-desc">
+          Measures advertising effectiveness and enables retargeting on Facebook and Instagram.
+          Data may be transferred to the United States. Meta complies with applicable data transfer mechanisms.
+          <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy ↗</a>
+        </div>
+      </div>
+
+      <div class="processor">
+        <div class="processor-name">LinkedIn Corporation — LinkedIn Insight Tag</div>
+        <div class="processor-desc">
+          Measures advertising effectiveness and enables retargeting on LinkedIn.
+          Data may be transferred to the United States under standard contractual clauses.
+          <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">LinkedIn Privacy Policy ↗</a>
+        </div>
+      </div>
+
+      <div class="processor">
+        <div class="processor-name">FormSubmit — Contact Form Processing</div>
+        <div class="processor-desc">
+          Processes and forwards contact form submissions to our email address. No data is stored by
+          FormSubmit beyond what is necessary to deliver your message.
+          <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener">FormSubmit Privacy Policy ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Data retention -->
+    <div class="section">
+      <h2>5. How Long We Keep Your Data</h2>
+      <ul>
+        <li><strong>Contact enquiries:</strong> We retain email correspondence for up to 3 years, or until the business relationship concludes, whichever is longer.</li>
+        <li><strong>Analytics data:</strong> Retained by Google Analytics for 14 months by default.</li>
+        <li><strong>Advertising data:</strong> Retained by Meta and LinkedIn per their own retention policies (typically 90–180 days for pixel data).</li>
+      </ul>
+    </div>
+
+    <!-- 6. International transfers -->
+    <div class="section">
+      <h2>6. International Data Transfers</h2>
+      <p>
+        Some of our third-party processors are based in the United States. Where personal data is
+        transferred outside the UK or European Economic Area (EEA), we ensure appropriate safeguards are
+        in place, including reliance on adequacy decisions and Standard Contractual Clauses (SCCs) as
+        approved by the European Commission.
+      </p>
+    </div>
+
+    <!-- 7. Your rights -->
+    <div class="section">
+      <h2>7. Your Rights Under GDPR</h2>
+      <p>
+        If you are located in the UK or EEA, you have the following rights in relation to your personal data:
+      </p>
+      <div class="rights-grid">
+        <div class="cell label">Right of access</div>
+        <div class="cell value">Request a copy of the personal data we hold about you.</div>
+        <div class="cell label">Right to rectification</div>
+        <div class="cell value">Ask us to correct inaccurate or incomplete data.</div>
+        <div class="cell label">Right to erasure</div>
+        <div class="cell value">Request deletion of your personal data ("right to be forgotten").</div>
+        <div class="cell label">Right to restrict</div>
+        <div class="cell value">Ask us to pause processing of your data in certain circumstances.</div>
+        <div class="cell label">Right to portability</div>
+        <div class="cell value">Receive your data in a machine-readable format to transfer elsewhere.</div>
+        <div class="cell label">Right to object</div>
+        <div class="cell value">Object to processing based on legitimate interests or for direct marketing.</div>
+        <div class="cell label">Right to withdraw consent</div>
+        <div class="cell value">Where processing is based on consent, withdraw it at any time.</div>
+      </div>
+      <p>
+        To exercise any of these rights, contact us at
+        <a href="mailto:kevin.keohane@brandandtalent.com">kevin.keohane@brandandtalent.com</a>.
+        We will respond within 30 days.
+      </p>
+    </div>
+
+    <!-- 8. Complaints -->
+    <div class="section">
+      <h2>8. Right to Complain</h2>
+      <p>
+        If you believe we have not handled your personal data in accordance with applicable law, you have
+        the right to lodge a complaint with your local data protection supervisory authority:
+      </p>
+      <ul>
+        <li><strong>UK:</strong> <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office (ICO) ↗</a></li>
+        <li><strong>EU:</strong> Your national data protection authority — find yours at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">edpb.europa.eu ↗</a></li>
+        <li><strong>US:</strong> We comply with applicable US state privacy laws including CCPA where relevant.</li>
+      </ul>
+      <p>We would, however, appreciate the opportunity to address your concerns directly before you approach a regulator.</p>
+    </div>
+
+    <!-- 9. Children -->
+    <div class="section">
+      <h2>9. Children's Privacy</h2>
+      <p>
+        This website is not directed at children under the age of 16. We do not knowingly collect
+        personal data from children. If you believe a child has provided us with personal data,
+        please contact us and we will promptly delete it.
+      </p>
+    </div>
+
+    <!-- 10. Changes -->
+    <div class="section">
+      <h2>10. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. The "Last updated" date at the top of this
+        page will always reflect the most recent revision. For significant changes, we will make reasonable
+        efforts to notify users.
+      </p>
+    </div>
+
+    <!-- 11. Contact -->
+    <div class="section">
+      <h2>11. Contact Us</h2>
+      <p>For any privacy-related questions or to exercise your rights:</p>
+      <div class="contact-box">
+        <p><strong>Brand &amp; Talent — Data Enquiries</strong></p>
+        <p>Email: <a href="mailto:kevin.keohane@brandandtalent.com">kevin.keohane@brandandtalent.com</a></p>
+        <p>Phone: <a href="tel:+14065525998">+1 406 552 5998</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 Brand &amp; Talent &nbsp;·&nbsp;
+    <a href="/privacy">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
