@@ -93,10 +93,11 @@ strong { font-weight: 700; }
 .nav-menu a { font-size: 0.94rem; color: var(--mute); font-weight: 500; transition: color 0.2s var(--ease); }
 .nav-menu a:hover { color: var(--white); }
 .nav-cta {
-  padding: 0.5rem 1.05rem; border: 1px solid var(--line);
+  padding: 0.5rem 1.05rem; border: 1px solid #ff1e83;
   border-radius: 999px; color: var(--white) !important;
+  background: #ff1e83;
 }
-.nav-cta:hover { border-color: var(--accent); color: var(--accent-2) !important; }
+.nav-cta:hover { background: #e0006e; border-color: #e0006e; color: var(--white) !important; }
 .nav-toggle {
   display: none; width: 42px; height: 42px; background: none; border: 1px solid var(--line);
   border-radius: 10px; cursor: pointer; padding: 0; flex-direction: column; gap: 5px;
