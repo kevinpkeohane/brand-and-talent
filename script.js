@@ -72,3 +72,35 @@
     targets.forEach(function (el) { el.classList.add("is-in"); });
   }, 1600);
 })();
+
+// Scrollspy — pink-underline active nav section on main page
+(function () {
+  var navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+  if (!navLinks.length || !("IntersectionObserver" in window)) return;
+
+  var sectionMap = {};
+  navLinks.forEach(function (link) {
+    var id = link.getAttribute('href').slice(1);
+    var section = document.getElementById(id);
+    if (section) sectionMap[id] = link;
+  });
+
+  var sectionIds = Object.keys(sectionMap);
+  if (!sectionIds.length) return;
+
+  var setActive = function (activeId) {
+    navLinks.forEach(function (link) { link.classList.remove('nav-active'); });
+    if (activeId && sectionMap[activeId]) sectionMap[activeId].classList.add('nav-active');
+  };
+
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
+
+  sectionIds.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) spy.observe(el);
+  });
+})();

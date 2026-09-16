@@ -461,3 +461,62 @@ strong { font-weight: 700; }
 .blog-section #soro-blog * {
   color: #fff !important;
 }
+
+/* ===== Blog nav (nav-inner / nav-links classes used on blog pages) ===== */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 30px;
+  width: auto;
+  transition: opacity 0.2s var(--ease);
+}
+.nav-logo:hover img { opacity: 0.78; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  font-size: 0.94rem;
+  color: var(--mute);
+  font-weight: 500;
+  transition: color 0.2s var(--ease);
+  text-decoration: none;
+}
+.nav-links a:hover { color: var(--white); }
+
+/* ===== Active nav indicator (pink underline) ===== */
+.nav-menu a[aria-current="page"],
+.nav-links a[aria-current="page"],
+.nav-menu a.nav-active,
+.nav-links a.nav-active {
+  color: var(--white) !important;
+  border-bottom: 2px solid #ff1e83;
+  padding-bottom: 2px;
+}
+/* Don't show underline on the CTA pill */
+.nav-cta.nav-active,
+.nav-cta[aria-current="page"] {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    display: none; /* blog pages don't have a mobile toggle — hide at small sizes */
+  }
+}
