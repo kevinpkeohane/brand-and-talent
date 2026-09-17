@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/brand-strategy-guide/thank-you"
+  to = "/brand-strategy-guide/thank-you/"
+  status = 301
+
+[forms]
+  [forms.bt-guide-download]
+    action = "/brand-strategy-guide/thank-you/"
