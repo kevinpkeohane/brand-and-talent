@@ -102,10 +102,29 @@
       if (currentEl) currentEl.textContent = current + 1;
     }
 
-    // Init sizes, then re-measure on resize
+    function equaliseHeights() {
+      // Reset first so natural heights are measurable
+      slides.forEach(function (s) {
+        var q = s.querySelector(".quote-lg");
+        if (q) q.style.height = "";
+      });
+      var maxH = 0;
+      slides.forEach(function (s) {
+        var q = s.querySelector(".quote-lg");
+        if (q) maxH = Math.max(maxH, q.offsetHeight);
+      });
+      slides.forEach(function (s) {
+        var q = s.querySelector(".quote-lg");
+        if (q) q.style.height = maxH + "px";
+      });
+    }
+
+    // Init sizes then equalise, re-run on resize
     setSlideSizes();
+    equaliseHeights();
     window.addEventListener("resize", function () {
       setSlideSizes();
+      equaliseHeights();
       goTo(Math.min(current, maxIndex()));
     });
 

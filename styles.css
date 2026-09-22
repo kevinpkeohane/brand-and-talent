@@ -630,10 +630,8 @@ table { border-collapse: collapse; width: 100%; }
   border-radius: var(--radius);
   padding: 1.8rem 1.6rem;
   box-sizing: border-box;
-  height: 300px;               /* fixed equal height */
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
 }
 .quote-lg:hover {
@@ -646,10 +644,7 @@ table { border-collapse: collapse; width: 100%; }
   line-height: 1.65;
   color: var(--mute);
   flex: 1;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
+
 }
 .quote-lg blockquote::before {
   content: "\201C";
