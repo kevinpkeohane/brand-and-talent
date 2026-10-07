@@ -3,7 +3,7 @@
 
 [[redirects]]
   from = "/"
-  to = "/blog/:post/"
+  to = "/blog/:post/?"
   status = 301
   force = true
   query = { post = ":post" }
