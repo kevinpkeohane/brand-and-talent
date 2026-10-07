@@ -2,6 +2,13 @@
   publish = "."
 
 [[redirects]]
+  from = "/"
+  to = "/blog/:post/"
+  status = 301
+  force = true
+  query = { post = ":post" }
+
+[[redirects]]
   from = "/brand-strategy-guide/thank-you"
   to = "/brand-strategy-guide/thank-you/"
   status = 301
