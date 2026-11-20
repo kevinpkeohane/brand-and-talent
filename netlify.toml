@@ -16,3 +16,14 @@
 [forms]
   [forms.bt-guide-download]
     action = "/brand-strategy-guide/thank-you/"
+
+[[headers]]
+  for = "/downloads/*.epub"
+  [headers.values]
+    Content-Type = "application/epub+zip"
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/downloads/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
