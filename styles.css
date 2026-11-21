@@ -713,3 +713,159 @@ table { border-collapse: collapse; width: 100%; }
   text-align: center;
 }
 .carousel-counter .carousel-current { color: var(--accent); font-weight: 700; }
+
+/* ---------- Decide · Build · Align · Scale diagnostic stages ---------- */
+.stage-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0 0 2rem;
+}
+.stage-jump a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.stage-jump a span {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent-2);
+}
+.stage-jump a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.diag-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.diag-stage {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--ink);
+  scroll-margin-top: 90px;
+}
+.diag-head {
+  background: #21151d;
+  border-bottom: 1px solid var(--line);
+  padding: 1.45rem 1.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.diag-step {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.3rem;
+}
+.diag-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  line-height: 1.2;
+  color: var(--white);
+}
+.diag-summary {
+  color: var(--mute);
+  font-size: 0.95rem;
+  max-width: 44ch;
+}
+.diag-pair {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  border-bottom: 1px solid var(--line);
+}
+.diag-q,
+.diag-a {
+  padding: 1.5rem 1.85rem;
+}
+.diag-q {
+  background: #161116;
+  border-right: 1px solid var(--line);
+}
+.diag-a {
+  background: var(--ink);
+}
+.diag-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.45rem;
+}
+.diag-symptom {
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--white);
+}
+.diag-cause {
+  font-size: clamp(1rem, 1.7vw, 1.12rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--white);
+}
+.diag-detail {
+  margin-top: 0.5rem;
+  color: var(--mute);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+.diag-foot {
+  background: var(--ink-2);
+  padding: 1.35rem 1.85rem;
+}
+.diag-work {
+  color: var(--mute);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+.diag-proof {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line-soft);
+  color: var(--mute-2);
+  font-size: 0.84rem;
+}
+.diag-work strong,
+.diag-proof strong {
+  color: var(--white);
+}
+.diag-note {
+  max-width: 68ch;
+  margin: 1.75rem 0 0;
+  color: var(--mute);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+@media (max-width: 760px) {
+  .diag-pair {
+    grid-template-columns: 1fr;
+  }
+  .diag-q {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .diag-head,
+  .diag-q,
+  .diag-a,
+  .diag-foot {
+    padding: 1.2rem 1.25rem;
+  }
+}
