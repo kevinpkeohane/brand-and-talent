@@ -869,3 +869,18 @@ table { border-collapse: collapse; width: 100%; }
     padding: 1.2rem 1.25rem;
   }
 }
+
+/* === exp-series volumes grid === */
+.exp-series { margin:32px 0 0; padding:28px 0 0; border-top:1px solid rgba(255,255,255,0.08); }
+.exp-series .guide-banner-kicker { margin-bottom:6px; }
+.exp-series-heading { font-size:1.3rem; font-weight:700; color:#f7f7f5; margin:0 0 20px; }
+.exp-vol-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.exp-vol-card { display:flex; flex-direction:column; gap:10px; padding:18px 14px; background:rgba(255,255,255,0.04); border-radius:10px; border:1px solid rgba(255,255,255,0.09); }
+.exp-vol-cover { width:100%; max-width:140px; height:auto; border-radius:4px; display:block; }
+.exp-vol-label { font-size:0.72rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; }
+.exp-vol-name { display:block; font-size:1.15rem; font-weight:800; color:#f7f7f5; margin-top:2px; }
+.exp-vol-desc { font-size:0.8rem; color:rgba(247,247,245,0.6); line-height:1.4; margin:0; flex:1; }
+.exp-vol-actions { display:flex; flex-direction:column; gap:7px; margin-top:auto; }
+.exp-vol-actions .guide-btn-primary, .exp-vol-actions .guide-btn-secondary { text-align:center; display:block; padding:7px 10px; font-size:0.8rem; }
+@media (max-width:900px) { .exp-vol-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:480px) { .exp-vol-grid { grid-template-columns:1fr 1fr; } }
